@@ -1,0 +1,126 @@
+# question 1 
+
+
+/ ou /*
+
+
+
+# question 2
+
+
+/descendant::title
+//title
+/movies/movie/title
+/*/*/title
+/movies/*/title
+
+
+
+
+# question 3
+
+//firstname (FAUX!! car on selectionne aussi les prénoms des acteurs )
+
+
+//directors//firstname
+//director//firstname
+//director/name/firstname
+
+//firstname[ not(ancestor::actor)]
+//firstname[ ancestor::director ]
+
+
+# question 4
+
+//movie[ year < 1980 ]/title
+/descendant-or-self::node()/child::movie[ number(child::year) < 1980 ]/child:: title
+
+//movie/title[following-sibling::year <1980]
+//movie/title[ ../year < 1980]
+//movie/title[ parent::node()/child::year < 1980] (== à la précédente)
+
+
+# question 5 
+
+//movie[ .//atitle ]/title
+//movie[ alternate_titles/atitle ]/title
+//movie[ alternate_titles[ atitle ] ]/title
+
+
+#question6
+
+//movie[ .//atitle/@country = "fr" ]/title
+ 
+                       (@country = "fr" peut s'écrire attribute::country = "fr")
+
+
+
+//movie[ alternate_titles/atitle/@country = "fr" ]/title
+//movie[ alternate_titles[ atitle [@country]] ]/title
+
+
+#question 7
+
+
+//movie[
+      directors//firstanme = "Quentin" and directors//lastname = "Tarantino"
+   
+
+]/title (FAUX!!: car le firstname et lastname peuvent ne pas etre sous le meme name)
+
+
+
+//movie[
+
+      .//directors/name[ firstanme = "Quentin" and lastname = "Tarantino"]
+
+]/title
+
+#question 8
+
+//movie[ 
+
+ runtime > (sum(//runtime/child::text()) div count(//runtime))
+
+]/title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
