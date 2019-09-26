@@ -84,8 +84,22 @@
 
 ]/title
 
+#question 17
+# . est quivalent à (self::*)
+
+'//director//lastname
+
+  not(. = following::director//lastname)
+and
+  not(. = preceding::director//lastname)
+
+]'
 
 
+#questions 17 bis : les titres des films les plus courts
+
+
+'//movie[ runtime/text() and not  (runtime > //movie/runtime)]/title'
 
 
 
