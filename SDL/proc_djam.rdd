@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM42" type="sdlText" text="timer T1" outline_color="-" background_color="-" center_coordinates="803 106" dimensions="76 40" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="393 162">
+<SdlFSMSymbol identifier="SYM1" type="sdlStart" outline_color="-" background_color="-" center_coordinates="454 177" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM27" type="sdlState" text="idle" outline_color="-" background_color="-" center_coordinates="454 224" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<StateTransitionBlock>
+<SdlFSMSymbolReference identifier="SYM29"/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM30" type="sdlInputSig" text="unF" outline_color="-" background_color="-" center_coordinates="454 432" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM31" type="sdlSendSig" text="cafe" outline_color="-" background_color="-" center_coordinates="454 484" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM32" type="sdlState" text="idle" outline_color="-" background_color="-" center_coordinates="454 536" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM33" type="sdlInputSig" text="deuxF" outline_color="-" background_color="-" center_coordinates="528 432" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM34" type="sdlSendSig" text="monnaie" outline_color="-" background_color="-" center_coordinates="528 484" dimensions="68 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM39" type="sdlSendSig" text="cafe" outline_color="-" background_color="-" center_coordinates="528 536" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM35" type="sdlState" text="idle" outline_color="-" background_color="-" center_coordinates="528 588" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<StateTransitionBlock>
+<SdlFSMSymbolReference identifier="SYM27"/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM28" type="sdlInputSig" text="unF" outline_color="-" background_color="-" center_coordinates="454 276" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM41" type="sdlInitTimer" text="set(NOW+5,T1)" outline_color="-" background_color="-" center_coordinates="454 328" dimensions="122 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM29" type="sdlState" text="attente" outline_color="-" background_color="-" center_coordinates="454 380" dimensions="68 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM36" type="sdlInputSig" text="deuxF" outline_color="-" background_color="-" center_coordinates="602 276" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM37" type="sdlSendSig" text="cafe" outline_color="-" background_color="-" center_coordinates="602 328" dimensions="60 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM38" type="sdlState" text="-" outline_color="-" background_color="-" center_coordinates="602 380" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>
